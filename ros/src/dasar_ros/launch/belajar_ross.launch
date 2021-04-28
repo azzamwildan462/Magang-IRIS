@@ -1,0 +1,7 @@
+<launch>
+    <!-- <node name="listener22" pkg="dasar_ros" type="listener" output="screen" respawn="true" /> 
+    <node name="talker" pkg="dasar_ros" type="talker" output="screen" respawn="true" />  -->
+    <node name="Node1" pkg="dasar_ros" type="Node1" output="screen" respawn="true" /> 
+    <node name="Node2" pkg="dasar_ros" type="Node2" output="screen" respawn="true" /> 
+    <node name="Node3" pkg="dasar_ros" type="Node3" output="screen" respawn="true" /> 
+</launch>

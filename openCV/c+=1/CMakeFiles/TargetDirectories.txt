@@ -1,0 +1,3 @@
+/home/wildan/projek/opencv/magang IRIS/CMakeFiles/rebuild_cache.dir
+/home/wildan/projek/opencv/magang IRIS/CMakeFiles/edit_cache.dir
+/home/wildan/projek/opencv/magang IRIS/CMakeFiles/main_prog.dir

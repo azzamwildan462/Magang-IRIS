@@ -1,0 +1,6 @@
+int64 center_bola_x
+int64 center_bola_y
+int64 target_sudut
+int64 kecepatan_x
+int64 kecepatan_y
+int64 kecepatan_teta

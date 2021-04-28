@@ -1,0 +1,5 @@
+<launch>
+    <node name="kamera" pkg="bismillah_fp" type="kamera" output="screen" respawn="true" /> 
+    <node name="pc" pkg="bismillah_fp" type="pc" output="screen" respawn="true" /> 
+    <node name="motor" pkg="bismillah_fp" type="motor" output="screen" respawn="true" /> 
+</launch>

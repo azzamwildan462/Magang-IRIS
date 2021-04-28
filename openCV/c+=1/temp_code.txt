@@ -1,0 +1,58 @@
+#include <opencv2/opencv.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <iostream>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+    // Mat gambar = imread("gambar/tess.png"), gambar_warna;
+    // Mat gambar_hsv;
+
+    namedWindow("ini trekbar", WINDOW_AUTOSIZE);
+    int LH = 0, UH = 0, LS = 0, US = 0, LV = 0, UV = 0;
+
+    // Size ukuran = gambar.size();
+    // cout << ukuran.height << endl;
+    // cout << ukuran.width << endl;
+
+    // cvtColor(gambar_resize, gambar_warna, COLOR_BGRA2GRAY);
+    // cvtColor(gambar_resize, gambar_hsv, COLOR_BGR2HSV);
+
+    // Point p1(20, 40), p2(100, 500), p3(200, 100);
+
+    // rectangle(gambar_resize, p1, p2, Scalar(0, 255, 0), -1);
+    // circle(gambar_resize, p3, 50, Scalar(0, 255, 0), -1);
+
+    // imshow("tes", gambar);
+    // imshow("tes123", gambar_resize);
+    // imshow("nyobak", gambar_hsv);
+
+    createTrackbar("L-H", "ini trekbar", &LH, 179);
+    createTrackbar("U-H", "ini trekbar", &UH, 179);
+    createTrackbar("L-S", "ini trekbar", &LS, 255);
+    createTrackbar("U-S", "ini trekbar", &US, 255);
+    createTrackbar("L-V", "ini trekbar", &LV, 255);
+    createTrackbar("U-V", "ini trekbar", &UV, 255);
+
+    while (1)
+    {
+        Mat gambar_yang_mau_disaring = imread("gambar/bola_iris.jpg");
+        Mat gambar_terhsv, gambar_tersaring, gambar_resize;
+        Size ukuran2 = gambar_yang_mau_disaring.size();
+        resize(gambar_yang_mau_disaring, gambar_resize, Size(100, 200));
+        cvtColor(gambar_resize, gambar_terhsv, COLOR_BGR2HSV);
+        inRange(gambar_terhsv, Scalar(LH, LS, LV), Scalar(UH, US, UV), gambar_tersaring);
+        imshow("gasss", gambar_tersaring);
+        imshow("yoi", gambar_terhsv);
+        cout << LH;
+
+        if (waitKey(1) == 97)
+            break;
+    }
+
+    // waitKey(0);
+    return 0;
+}

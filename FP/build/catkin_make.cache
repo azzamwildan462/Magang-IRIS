@@ -1,0 +1,2 @@
+bismillah_fp
+-DCATKIN_DEVEL_PREFIX=/home/wildan/projek/bismillah magang IRIS 2021/FP/devel -DCMAKE_INSTALL_PREFIX=/home/wildan/projek/bismillah magang IRIS 2021/FP/install -G Unix Makefiles

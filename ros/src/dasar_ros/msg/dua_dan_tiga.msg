@@ -1,0 +1,2 @@
+string tanya
+string jawab
